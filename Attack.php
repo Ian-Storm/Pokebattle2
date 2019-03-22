@@ -6,7 +6,7 @@ class Attack {
 
 	public function __construct($attack, $dmg)
 	 {
-	 	 $this->attack = $attack;
-	 	 $this->dmg = $dmg;
+	 	$this->attack = $attack;
+	 	$this->dmg = $dmg;
 	 }
 }

@@ -6,7 +6,7 @@ class Weakness {
 
 	public function __construct($type, $multiplier)
 	 {
-	 	 $this->type = $type;
-	 	 $this->multiplier = $multiplier;
+	 	$this->type = $type;
+	 	$this->multiplier = $multiplier;
 	 }
 }

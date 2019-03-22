@@ -6,7 +6,7 @@ class Resistance {
 
 	public function __construct($type, $value)
 	 {
-	 	 $this->type = $type;
-	 	 $this->value = $value;
+	 	$this->type = $type;
+	 	$this->value = $value;
 	 }
 }
