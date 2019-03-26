@@ -19,10 +19,6 @@ class Pokemon {
         $this->resistance = $resistance;
 	 }
 
-	 public function __toString() {
-        return json_encode($this);
-    }
-
     function attack($attack, $other){
     	$dmg = $attack->dmg;
 

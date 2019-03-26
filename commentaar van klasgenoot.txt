@@ -1,0 +1,3 @@
+Ik zou van mijn public variabelen protected kunnen maken voor encapsulatie.
+Ik had een stuk code wat niet nodig was en heb ik weggehaald.
+Ik had mijn type kunnen laten extanden naar resistance/weakness zodat ik hem direct kan aanspreken.
