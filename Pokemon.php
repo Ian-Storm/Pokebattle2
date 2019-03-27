@@ -1,12 +1,12 @@
 <?php
 
 class Pokemon {
-	public $name;
-	public $type;
-	public $health;
-	public $attacks;
-	public $weakness;
-	public $resistance;
+	private $name;
+	private $type;
+	private $health;
+	private $attacks;
+	private $weakness;
+	private $resistance;
 
 	 public function __construct($name, $type, $hp, $attacks, $weakness, $resistance)
 	 {
@@ -35,6 +35,14 @@ class Pokemon {
 
     function calculation($dmg, $other){
     	$other->health -= $dmg;
+    }
+
+    function getName(){
+        return $this->name;
+    }
+
+    function setName($name){
+        $this->name = $name;
     }
 
 }

@@ -9,4 +9,5 @@ class Resistance {
 	 	$this->type = $type;
 	 	$this->value = $value;
 	 }
+
 }

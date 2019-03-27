@@ -15,6 +15,7 @@
 	require 'Charmeleon.php';
 
 	$Pikachu = new Pikachu('Pikachu');
+	$Pikachu->setName('Herman');
 	$Charmeleon = new Charmeleon('Charmeleon');
 
 	//print_r($Pikachu);
