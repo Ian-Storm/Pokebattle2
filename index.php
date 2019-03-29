@@ -15,7 +15,6 @@
 	require 'Charmeleon.php';
 
 	$Pikachu = new Pikachu('Pikachu');
-	$Pikachu->setName('Herman');
 	$Charmeleon = new Charmeleon('Charmeleon');
 
 	//print_r($Pikachu);
@@ -25,14 +24,14 @@
 	<div>
 		<?php
 
-		echo 'Pikachu: ' . $Pikachu->health . ' health.' . '<br>';
-		echo 'Charmeleon: ' . $Charmeleon->health . ' health.' . '<br>';
-		echo 'Pikachu used ' . $Pikachu->attacks[1]->attack . '.' . '<br>';
-			$Pikachu->attack($Pikachu->attacks[1], $Charmeleon);
-		echo 'Charmeleon: ' . $Charmeleon->health . ' health left.' . '<br>';
-			 $Charmeleon->attack($Charmeleon->attacks[1], $Pikachu);
-		echo 'Charmeleon used ' . $Charmeleon->attacks[1]->attack . '.' . '<br>';
-		echo 'Pikachu: ' . $Pikachu->health . ' health left.';
+		echo 'Pikachu: ' . $Pikachu->getHealth() . ' health.' . '<br>';
+		echo 'Charmeleon: ' . $Charmeleon->getHealth() . ' health.' . '<br>';
+		echo 'Pikachu used ' . $Pikachu->getAttack() . '.' . '<br>';
+			$Pikachu->attack($Pikachu->getAttack(), $Charmeleon);
+		echo 'Charmeleon: ' . $Charmeleon->setHealth($health) . ' health left.' . '<br>';
+			 $Charmeleon->attack($Charmeleon->getAttack(), $Pikachu);
+		echo 'Charmeleon used ' . $Charmeleon->getAttack() . '.' . '<br>';
+		echo 'Pikachu: ' . $Pikachu->setHealth($health) . ' health left.';
 
 		?>
 	</div>

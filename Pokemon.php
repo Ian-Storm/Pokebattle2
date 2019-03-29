@@ -35,14 +35,20 @@ class Pokemon {
 
     function calculation($dmg, $other){
     	$other->health -= $dmg;
+
     }
 
-    function getName(){
-        return $this->name;
+    function getHealth(){
+        return $this->health;
     }
 
-    function setName($name){
-        $this->name = $name;
+    function getAttack(){
+        return $this->attacks[1]->attack;
+    }
+
+    function setHealth($health){
+        $this->health = $health;
+        return $this->health;
     }
 
 }
