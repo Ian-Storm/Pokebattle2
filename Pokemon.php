@@ -8,7 +8,7 @@ class Pokemon {
 	private $weakness;
 	private $resistance;
 
-	 public function __construct($name, $type, $hp, $attacks, $weakness, $resistance)
+	public function __construct($name, $type, $hp, $attacks, $weakness, $resistance)
 	 {
 	 	$this->name = $name;
         $this->type = $type;
@@ -19,8 +19,9 @@ class Pokemon {
         $this->resistance = $resistance;
 	 }
 
-    function attack($attack, $other){
-    	$dmg = $attack->dmg;
+    public function attack($other){
+        $attack = $this->getAttack();
+        $dmg = $attack->dmg;
 
     	//if type attacker = weakness other then dmg x weakness multiplier
     	if ($this->type->type == $other->weakness->type) {
@@ -33,22 +34,20 @@ class Pokemon {
     	$this->calculation($dmg, $other);
     } 
 
-    function calculation($dmg, $other){
+    private function calculation($dmg, $other){
     	$other->health -= $dmg;
-
     }
 
-    function getHealth(){
+    public function getHealth(){
         return $this->health;
     }
 
-    function getAttack(){
-        return $this->attacks[1]->attack;
+    public function getAttack(){
+        return $this->attacks[1];
     }
 
-    function setHealth($health){
+    private function setHealth($health){
         $this->health = $health;
-        return $this->health;
     }
 
 }
