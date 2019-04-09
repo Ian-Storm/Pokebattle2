@@ -1,12 +1,20 @@
 <?php
 
 class Weakness {
-	public $type;
-	public $multiplier;
+	private $type;
+	private $multiplier;
 
 	public function __construct($type, $multiplier)
 	 {
 	 	$this->type = $type;
 	 	$this->multiplier = $multiplier;
 	 }
+
+	public function getWeakness() {
+		return $this->type;
+	}
+
+	public function getWeaknessMultiplier() {
+		return $this->multiplier;
+	}
 }

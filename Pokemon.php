@@ -21,15 +21,15 @@ class Pokemon {
 
     public function attack($other){
         $attack = $this->getAttack();
-        $dmg = $attack->dmg;
+        $dmg = $attack->getAttackDmg();
 
     	//if type attacker = weakness other then dmg x weakness multiplier
-    	if ($this->type->type == $other->weakness->type) {
+    	if ($this->type->getType() == $other->weakness->getWeakness()) {
     	//dmg x weakness multiplier
-    		$dmg = $attack->dmg * $other->weakness->multiplier;
-    	} elseif ($this->type->type == $other->resistance->type) {
+    		$dmg = $attack->getAttackDmg() * $other->weakness->getWeaknessMultiplier();
+    	} elseif ($this->type->getType() == $other->resistance->getResistance()) {
     		//dmg x resistance 
-    		$dmg = $attack->dmg - $other->resistance->value;
+    		$dmg = $attack->getAttackDmg() - $other->resistance->getResistanceValue();
     	}  
     	$this->calculation($dmg, $other);
     } 
