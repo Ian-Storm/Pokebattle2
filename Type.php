@@ -1,14 +1,16 @@
 <?php
 
-class Type {
-	private $type;
+class Type
+{
+    private $type;
 
-	public function __construct($type)
-	 {
-	 	$this->type = $type;
-	 }
+    public function __construct($type)
+    {
+        $this->type = $type;
+    }
 
-	public function getType() {
-		return $this->type;
-	}
+    public function getType()
+    {
+        return $this->type;
+    }
 }

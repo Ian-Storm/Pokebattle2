@@ -1,21 +1,24 @@
 <?php
 
-class Resistance {
-	private $type;
-	private $value;
+class Resistance
+{
+    private $type;
+    private $value;
 
-	public function __construct($type, $value)
-	 {
-	 	$this->type = $type;
-	 	$this->value = $value;
-	 }
+    public function __construct($type, $value)
+    {
+        $this->type = $type;
+        $this->value = $value;
+    }
 
-	public function getResistance() {
-		return $this->type;
-	}
+    public function getResistance()
+    {
+        return $this->type;
+    }
 
-	public function getResistanceValue() {
-		return $this->value;
-	}
+    public function getResistanceValue()
+    {
+        return $this->value;
+    }
 
 }
