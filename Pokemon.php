@@ -20,27 +20,37 @@ class Pokemon
         $this->resistance = $resistance;
     }
 
-    public function attack($other)
+    /**
+    * this gets the attack that is used of the pokemon and applies weakness or resistance when neccesary 
+    *
+    * @param pokemon $pokemon
+    */
+    public function attack($pokemon)
     {
         $attack = $this->getAttack();
         $dmg = $attack->getAttackDmg();
 
-        //if type attacker = weakness other then dmg x weakness multiplier
-        if ($this->type->getType() == $other->weakness->getWeakness()) {
-            //dmg x weakness multiplier
-            $dmg = $attack->getAttackDmg() * $other->weakness->getWeaknessMultiplier();
-        } elseif ($this->type->getType() == $other->resistance->getResistance()) {
-            //dmg x resistance
-            $dmg = $attack->getAttackDmg() - $other->resistance->getResistanceValue();
+        /** if type attacker = weakness pokemon then dmg x weakness multiplier */
+        if ($this->type->getType() == $pokemon->weakness->getWeakness()) {
+            /** dmg x weakness multiplier */
+            $dmg = $attack->getAttackDmg() * $pokemon->weakness->getWeaknessMultiplier();
+        } elseif ($this->type->getType() == $pokemon->resistance->getResistance()) {
+            /** dmg x resistance value */
+            $dmg = $attack->getAttackDmg() - $pokemon->resistance->getResistanceValue();
         }
-        $this->calculation($dmg, $other);
+        $this->calculation($dmg, $pokemon);
     }
 
-    private function calculation($dmg, $other)
+    private function calculation($dmg, $pokemon)
     {
-        $other->health -= $dmg;
+        $pokemon->health -= $dmg;
     }
 
+    /**
+    * getting the health of the pokemon
+    *
+    * @return $this->health
+    */
     public function getHealth()
     {
         return $this->health;
