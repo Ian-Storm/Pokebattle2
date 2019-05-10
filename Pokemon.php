@@ -41,6 +41,12 @@ class Pokemon
         $this->calculation($dmg, $pokemon);
     }
 
+    /**
+    * calculating the pokemon health after the damage it would have taken
+    *
+    * @param dmg $dmg
+    * @param pokemon $pokemon
+    */
     private function calculation($dmg, $pokemon)
     {
         $pokemon->health -= $dmg;
@@ -56,11 +62,21 @@ class Pokemon
         return $this->health;
     }
 
+    /**
+    * getting the attack of the pokemon
+    *
+    * @return $this->attacks[1]
+    */
     public function getAttack()
     {
         return $this->attacks[1];
     }
 
+    /**
+    * setting the health of the pokemon
+    *
+    * @return $this->health
+    */
     private function setHealth($health)
     {
         $this->health = $health;

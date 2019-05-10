@@ -9,6 +9,11 @@ class Type
         $this->type = $type;
     }
 
+    /**
+    * getting the type of the pokemon that is attacked
+    *
+    * @return $this->type
+    */
     public function getType()
     {
         return $this->type;

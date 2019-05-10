@@ -11,6 +11,11 @@ class Attack
         $this->dmg = $dmg;
     }
 
+    /**
+    * getting the damage of the used attack
+    *
+    * @return $this->dmg
+    */
     public function getAttackDmg()
     {
         return $this->dmg;
